@@ -571,19 +571,7 @@ var PassageMenuView = Backbone.View.extend({
         }
 
         step.util.activePassageId(this.model.get("passageId"));
-
-        var args = this.model.get("args") || "";
-
-        //remove all references from the args
-        args = args
-            .replace(/reference=[0-9a-zA-Z :.;-]+/ig, "")
-            .replace(/&&/ig, "")
-            .replace(/&$/ig, "");
-
-        if (args.length > 0 && args[args.length - 1] != '|') {
-            args += "|";
-        }
-        args += "reference=" + key.osisKeyId;
+        var args = step.router.replaceReference(this.model.get("args") || "", key.osisKeyId);
         step.router.navigateSearch(args);
     },
     /**

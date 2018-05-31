@@ -387,5 +387,19 @@ var StepRouter = Backbone.Router.extend({
             }
         });
         return tokens.join("|");
+    },
+    replaceReference: function(args, newRef) {
+        // remove all references from the args
+        var newArgs = args
+            .replace(/\|?reference=[0-9a-zA-Z :.;-]+/ig, "")
+            .replace(/&&/ig, "")
+            .replace(/&$/ig, "");
+
+        if (newArgs.length > 0 && newArgs[newArgs.length - 1] != '|') {
+            newArgs += "|";
+        }
+        newArgs += "reference=" + newRef;
+
+        return newArgs;
     }
 });

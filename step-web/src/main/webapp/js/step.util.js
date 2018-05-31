@@ -609,19 +609,6 @@ step.util = {
         }
         passageModel.trigger("font:change");
     },
-    getKeyValues: function (args) {
-        var tokens = (args || "").split("|");
-        var data = [];
-        for (var i = 0; i < tokens.length; i++) {
-            var tokenParts = tokens[i].split("=");
-            if (tokenParts.length > 1) {
-                var key = tokenParts[0];
-                var value = tokenParts.slice(1).join("=");
-                data.push({ key: key, value: value });
-            }
-        }
-        return data;
-    },
     safeEscapeQuote: function (term) {
         if (term == null) {
             return "";
