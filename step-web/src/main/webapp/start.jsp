@@ -308,12 +308,10 @@
                             <i class="glyphicon glyphicon-remove"></i>
                         </a>
 
-                        <h1><fmt:message key="simple_intro_welcome" /></h1>
-                        <h1><fmt:message key="simple_intro_tyndale_house_project" /></h1>
-                        <br />
+                        <h3><fmt:message key="simple_intro_welcome" /></h3>
+                        <h4><fmt:message key="simple_intro_tyndale_house_project" /></h4>
 
-                        <fmt:message key="simple_intro" />
-                        <br /><br />
+                        <p><fmt:message key="simple_intro" /></p>
 
                         <fmt:bundle basename="InteractiveBundle">
                             <fmt:message key="the_pentateuch" var="pentateuch" />
@@ -326,7 +324,7 @@
                         <search:sample_search explanation="chained_searches_explanation_subject" option1="ESV" option1type="version" option2="throne" option2type="meanings" option3="David" option3type="subject" option4="Isa-Rev" option4type="reference" sampleURL="/?q=version=ESV|meanings=throne|subject=david|reference=Isa-Rev&options=HNVUG" />
                         <search:sample_search explanation="interlinear_versions_explanation" option1="KJV" option1type="version" option2="WHNU" option2type="version" option3="John 1" option3type="reference" sampleURL="/?q=version=KJV|version=WHNU|reference=John.1&options=HVLUNM&display=INTERLINEAR" showInterlinear="true" />
 
-                        <div class="text-muted step-copyright"><span>&copy; <a href="http://www.tyndale.cam.ac.uk" target="_blank">Tyndale House, Cambridge, UK</a> - <%= Calendar.getInstance().get(Calendar.YEAR) %><span></span></div>
+                        <div class="text-muted step-copyright"><span>&copy;</span><span><%= Calendar.getInstance().get(Calendar.YEAR) %></span> <a href="http://www.tyndale.cam.ac.uk" target="_blank">Tyndale House, Cambridge, UK</a></div>
                     </div>
                 </div>
             </div>
