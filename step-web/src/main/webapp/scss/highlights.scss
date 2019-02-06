@@ -35,7 +35,7 @@
 
 .primaryLightBg {
   background-color: $highlight-color !important;
-  color: $quickLexiconFontColour;
+  color: $quickLexiconFontColour !important;
 
   .segC0, .segC1 {
     color: $quickLexiconFontColour;
