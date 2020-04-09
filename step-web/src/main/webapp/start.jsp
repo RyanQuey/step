@@ -108,9 +108,9 @@
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
         <div>
-            <div class="navbar-header search-form">
+            <div class="navbar-header">
                 <div class="navbar-brand col-xs-12">
-                        <span class="hidden-xs title">
+                    <span class="hidden-xs title">
                             <a href="/" id="logo">
                                 <svg width="90px" height="22px" viewBox="0 0 90 22" version="1.1"
                                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -139,9 +139,9 @@
                             </span>
                         </span>
                     <span class="help"><jsp:include page="jsps/menu.jsp"/></span>
-                    <form role="form">
+                    <form role="form" class="search-form">
                         <div class="input-group">
-                            <input id="masterSearch" type="text" class="form-control input-sm"
+                            <input type="text" class="form-control input-sm master-search"
                                    placeholder="<fmt:message key="search_placeholder" />">
                             <span class="input-group-btn findButton">
                                     <span>Search</span>
@@ -427,6 +427,7 @@
 <script src="js/backbone/views/view_restore.js" type="text/javascript"></script>
 
 <script src="js/backbone/step_router.js" type="text/javascript"></script>
+<script src="js/backbone/views/view_header.js" type="text/javascript"></script>
 <script src="js/backbone/views/view_panel.js" type="text/javascript"></script>
 <script src="js/backbone/views/view_display.js" type="text/javascript"></script>
 <script src="js/backbone/views/view_display_passage.js" type="text/javascript"></script>
