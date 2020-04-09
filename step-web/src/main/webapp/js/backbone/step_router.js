@@ -153,8 +153,6 @@ var StepRouter = Backbone.Router.extend({
             partRendered: partRendered
         });
 
-        this._renderSummary(panelModel);
-
         var endRender = new Date().getTime();
         var totalRender = endRender - startRender;
         if (totalTime != -1) {
@@ -187,15 +185,6 @@ var StepRouter = Backbone.Router.extend({
         }
     },
 
-    _renderSummary: function (passageModel) {
-        var searchTokens = passageModel.get("searchTokens");
-        var container = $("<span></span>").addClass("argSummary");
-        step.util.ui.renderArgs(searchTokens, container);
-
-        var passageOptions = step.util.getPassageContainer(passageModel.get("passageId")).find(".passageOptionsGroup");
-        passageOptions.find(".argSummary").remove();
-        passageOptions.append(container);
-    },
     doMasterSearch: function (query, options, display, pageNumber, filter, sort, context, quiet) {
         var self = this;
         if (step.util.isBlank(query)) {
